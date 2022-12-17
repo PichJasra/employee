@@ -8,18 +8,18 @@
       "id": 1
     },
     {
-      "name": "Bob",
-      "email": "bob@in.com",
-      "phone": "06309475213",
-      "active": true,
-      "id": 2
-    },
-    {
+      "id": 3,
       "name": "Jack",
       "email": "jack@gmail.com",
       "phone": "06705541234",
+      "active": false
+    },
+    {
+      "name": "Frank",
+      "email": "frank@gmail.com",
+      "phone": "0631548721",
       "active": true,
-      "id": 3
+      "id": 4
     }
   ]
 }

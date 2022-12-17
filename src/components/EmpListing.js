@@ -5,15 +5,12 @@ const EmpListing = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
-    const LoadDetail = (id) => {
-        navigate("/employee/detail/" + id);
-    }
     const LoadEdit = (id) => {
         navigate("/employee/edit/" + id);
     }
     const Removefunction = (id) => {
         if (window.confirm('Do you want to remove?')) {
-            fetch("http://localhost:8000/employee/" + id, {
+            fetch("http://localhost:8000/employee/" + id, { //port is 8000 because at the creation of the db i had to change the default port
                 method: "DELETE"
             }).then((res) => {
                 alert('Removed successfully.')
@@ -67,7 +64,6 @@ const EmpListing = () => {
                                         <td>{item.phone}</td>
                                         <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</a>
                                             <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remove</a>
-                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Details</a>
                                         </td>
                                     </tr>
                                 ))

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const EmpCreate = () => {
+const EmpCreate = () => {   //initial state of the create employee form
 
     const[id,idchange]=useState("");
     const[name,namechange]=useState("");
@@ -18,7 +18,7 @@ const EmpCreate = () => {
       const empdata={name,email,phone,active};
       
 
-      fetch("http://localhost:8000/employee",{
+      fetch("http://localhost:8000/employee",{ //port is 8000 because at the creation of the db i had to change the default port
         method:"POST",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(empdata)
